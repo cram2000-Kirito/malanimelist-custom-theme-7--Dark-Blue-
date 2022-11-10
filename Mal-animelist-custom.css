@@ -5,15 +5,15 @@
     --color-onhold: #f1c83e;
     --color-dropped: #a12f31;
     --color-plantowatch: #c3c3c3;
-    /*color elements and typo*/
+    /*color elements and font*/
     --color-scoreprogress: #0080ff;
     --color-title: #fbfbfb;
     --color-progress: #fff;
-    --color-type:  #fff;
+    --color-type: #fff;
     --color-number: #fff;
     --color-airing-rewatching: #ff0;
     --color-icon-streaming: #4e83ff;
-    --typo: Verdana, Arial;
+    --font: Verdana, Arial;
 }
 /*background*/
 body.ownlist.anime{
@@ -148,7 +148,7 @@ body.ownlist.anime{
     padding-top: 2px;
     font-size:1.35em!important;
     text-decoration:none!important;
-    font-family: var(--typo);
+    font-family: var(--font);
     font-weight:100!important;
     color: var(--color-title) !important;
     max-height: 30px;
@@ -255,35 +255,35 @@ td.td1.borderRBL{
     content:"\f05d";
     font-size:1.5em;
     line-height:25px;
-    font-family: var(--typo)!important
+    font-family: var(--font)!important
 }
 .list-table .list-table-data:hover .data.status.reading:before,.list-table .list-table-data:hover .data.status.watching:before{
     color:#fff;
     content:"\f008";
     font-size:1.5em;
     line-height:25px;
-    font-family:var(--typo)!important
+    font-family:var(--font)!important
 }
 .list-table .list-table-data:hover .data.status.plantoread:before,.list-table .list-table-data:hover .data.status.plantowatch:before{
     color:#fff;
     content:"\f073";
     font-size:1.5em;
     line-height:25px;
-    font-family:var(--typo)!important
+    font-family:var(--font)!important
 }
 .list-table .list-table-data:hover .data.status.onhold:before{
     color:#fff;
     content:"\f017";
     font-size:1.5em;
     line-height:25px;
-    font-family:var(--typo)!important
+    font-family:var(--font)!important
 }
 .list-table .list-table-data:hover .data.status.dropped:before{
     color:#fff;
     content:"\f00d";
     font-size:1.5em;
     line-height:25px;
-    font-family:var(--typo)!important
+    font-family:var(--font)!important
 }
 .link.sort+a{
     display:none
