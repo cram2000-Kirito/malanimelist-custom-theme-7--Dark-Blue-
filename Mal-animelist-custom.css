@@ -1,0 +1,637 @@
+:root{
+    /*color status*/
+    --color-current: #2db039;
+    --color-completed: #26448f;
+    --color-onhold: #f1c83e;
+    --color-dropped: #a12f31;
+    --color-plantowatch: #c3c3c3;
+    --typo: Verdana, Arial;
+}
+
+body.ownlist.anime{
+    background-color: dimgrey;
+    background-size: cover;
+    background-position: 90% top;
+}
+.list-container{
+  opacity: 0.9;
+}
+/*menu*/
+.status-menu-container{
+    z-index: 9;
+}
+
+
+/*table-header*/
+.list-table-header{
+    display: none;
+}
+
+/*status barre*/
+.list-table .list-table-data .data.status, .data.status{
+  display: none;
+}
+/*title note*/
+.list-table .list-table-data .data.title .notes {
+    display: none;
+}
+/*tags*/
+.list-table .list-table-data .data.tags {
+    display: none;
+}
+
+
+
+/*Cadre status*/
+.list-table .list-table-data .data.status.reading, .list-table .list-table-data .data.status.watching ~ .data.image {
+    border: var(--color-current) 2px solid;
+}
+.list-table .list-table-data .data.status.completed ~ .data.image {
+    border: var(--color-completed) 2px solid; 
+}
+.list-table .list-table-data .data.status.onhold ~ .data.image {
+    border: var(--color-onhold) 2px solid; 
+}
+.list-table .list-table-data .data.status.dropped ~ .data.image {
+    border: var(--color-dropped) 2px solid; 
+}
+.list-table .list-table-data .data.status.plantoread, .list-table .list-table-data .data.status.plantowatch ~ .data.image {
+    border: var(--color-plantowatch) 2px solid; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.list-table .list-table-data:hover .data.title{
+    color:#fff;
+}
+.header a:hover,.list-table .list-table-data a:not(.edit-disabled):hover{
+    text-decoration:underline
+}
+.list-table .list-table-data .data{
+    display:table-cell;
+    padding:4px 0;
+    text-align:center;
+    vertical-align:middle;
+    color:#fff!important;
+    border:none;
+}
+.list-table .list-table-data a:not(.edit-disabled):hover{
+    text-shadow:0 0 2px #000,0 0 1px #000,1px 1px 7px #000,0 0 0 #000;
+    color:#fff!important;
+}
+.list-table .list-table-data a.edit-disabled{
+    color:#fff;
+}
+.list-table .list-table-data .data.title .link{
+    padding-top: 2px;
+    font-size:1.35em!important;
+    text-decoration:none!important;
+    font-family: var(--typo);
+    font-weight:100!important;
+    color:#fff!important;
+    max-height: 30px;
+}
+.list-table .list-table-data:hover .data.title .link{
+    color:#fff!important;
+}
+.list-table .list-table-data .data.title .content-status,.list-table .list-table-data .data.title .rereading,.list-table .list-table-data .data.title .rewatching{
+    color:#fff!important;
+    font-size:.9em;
+    text-align:right!important;
+    vertical-align:middle!important;
+    width:180px!important;
+    display:block;
+    opacity:0
+}
+.list-table .list-table-data:hover .data.title .content-status,.list-table .list-table-data:hover .data.title .rereading,.list-table .list-table-data:hover .data.title .rewatching{
+    color:#fff!important;
+    font-size:1em;
+    right:4px!important;
+    top:30px!important;
+    vertical-align:middle!important;
+    width:80px!important;
+    text-align:right;
+    display:block;
+    opacity:1;
+    position:absolute;
+    font-weight:700
+}
+.list-table .list-table-data .data.season{
+    color:#fff!important;
+    font-size:.9em;
+    text-align:left!important;
+    vertical-align:middle!important;
+    width:80px!important;
+    display:block;
+    opacity:0
+}
+.list-table .list-table-data:hover .data.season{
+    color:#fff!important;
+    font-size:1em;
+    left:4px!important;
+    top:30px!important;
+    vertical-align:middle!important;
+    display:block;
+    opacity:1;
+    position:absolute;
+    font-weight:700
+}
+.list-table .list-table-data .data.score .link{
+    font-size:1.2em;
+    font-weight:700
+}
+td.td1.borderRBL{
+    color:#fff!important
+}
+.list-table .list-table-data .data.title .more{
+    position:relative
+}
+.list-table .more-info{
+    display:none
+}
+.list-table .more-info .more-content{
+    padding:10px
+}
+.list-table .list-table-data .data.status{
+    width:4px;
+    z-index:9!important
+}
+.list-table .list-table-data .data.status .text{
+    display:none
+}
+.list-table .list-table-data .data.status.reading,.list-table .list-table-data .data.status.watching{
+    background-color:transparent
+}
+.list-table .list-table-data .data.status.plantoread,.list-table .list-table-data .data.status.plantowatch{
+    background-color:transparent
+}
+.list-table .list-table-data .data.status.completed{
+    background-color:transparent
+}
+.list-table .list-table-data .data.status.onhold{
+    background-color:transparent
+}
+.list-table .list-table-data .data.status.dropped{
+    background-color:transparent
+}
+.list-table .list-table-data:hover .data.status.completed:before,.list-table .list-table-data:hover .data.status.dropped:before,.list-table .list-table-data:hover .data.status.onhold:before,.list-table .list-table-data:hover .data.status.plantoread:before,.list-table .list-table-data:hover .data.status.plantowatch:before,.list-table .list-table-data:hover .data.status.reading:before,.list-table .list-table-data:hover .data.status.watching:before{
+    height:25px;
+    width:25px!important;
+    background-position:50% 50%;
+    background-repeat:no-repeat;
+    background-size:15px 17px;
+    display:inline-block!important;
+    position:relative;
+    left:25px!important;
+    top:0!important;
+    z-index:10!important;
+    content:"";
+    pointer-events:none;
+    opacity:1!important
+}
+.list-table .list-table-data:hover .data.status.completed:before{
+    color:#fff;
+    content:"\f05d";
+    font-size:1.5em;
+    line-height:25px;
+    font-family: var(--typo)!important
+}
+.list-table .list-table-data:hover .data.status.reading:before,.list-table .list-table-data:hover .data.status.watching:before{
+    color:#fff;
+    content:"\f008";
+    font-size:1.5em;
+    line-height:25px;
+    font-family:var(--typo)!important
+}
+.list-table .list-table-data:hover .data.status.plantoread:before,.list-table .list-table-data:hover .data.status.plantowatch:before{
+    color:#fff;
+    content:"\f073";
+    font-size:1.5em;
+    line-height:25px;
+    font-family:var(--typo)!important
+}
+.list-table .list-table-data:hover .data.status.onhold:before{
+    color:#fff;
+    content:"\f017";
+    font-size:1.5em;
+    line-height:25px;
+    font-family:var(--typo)!important
+}
+.list-table .list-table-data:hover .data.status.dropped:before{
+    color:#fff;
+    content:"\f00d";
+    font-size:1.5em;
+    line-height:25px;
+    font-family:var(--typo)!important
+}
+.link.sort+a{
+    display:none
+}
+.data.tags:before{
+    margin:0;
+    width:12px!important;
+    padding:5px 0!important;
+    z-index:10
+}
+data.tags:hover:before{
+    width:15px;
+    padding:5px 5px 5px 4px!important;
+    font-size:1.1em;
+    color:#fff;
+    cursor:default
+}
+.data.tags:before,.data.tags:hover:before{
+    position:absolute;
+    left:50px;
+    top:0;
+    height:15px!important
+}
+.list-item:hover .data.tags:before{
+    opacity:1
+}
+.data.tags{
+    opacity:1;
+    height:100%;
+    width:0;
+    z-index:25
+}
+.data.tags *{
+    z-index:25;
+    transition:opacity .15s ease-in-out;
+    color:#000;
+    margin-top:25px
+}
+@-webkit-keyframes fadeIn{
+    from{opacity:0}to{opacity:1}
+}
+@keyframes fadeIn{
+    from{opacity:0}to{opacity:1}
+}
+.data.tags:hover *{
+    width:180px;
+    -webkit-animation-name:fadeIn;
+    animation-name:fadeIn;
+    -webkit-animation-duration:.5s;
+    animation-duration:.5s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both
+}
+.data.tags a{
+    text-align:left;
+    font-size:1em;
+    color:#000;
+    white-space:nowrap
+}
+.data.tags:before{
+    content:'';
+    border:none;
+    opacity:0;
+    margin-top:0;
+    background-image:url(http://i.imgur.com/WC8S1cb.png);
+    background-size:15px 14px;
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+    letter-spacing:-1px;
+    background-color:transparent;
+    width:25px!important;
+    height:15px!important;
+    display:block
+}
+.data.tags:hover:before{
+    content:'';
+    background-image:url(http://i.imgur.com/WC8S1cb.png);
+    background-size:15px 14px;
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+    letter-spacing:-1px;
+    color:#6ebcf4;
+    width:25px!important;
+    height:15px!important;
+    display:block
+}
+.data.tags textarea{
+    position:absolute;
+    font-family:monospace!important;
+    z-index:50;
+    width:180px!important;
+    height:200px!important
+}
+.edit-transition.edit-leave{
+    display:none
+}
+.tags .edit{
+    position:absolute;
+    top:-25px;
+    left:50px;
+    width:25px!important;
+    height:25px;
+    font-size:0!important
+}
+.tags .edit:hover{
+    width:25px!important
+}
+div[class*=tags-]{
+    overflow:hidden;
+    height:200px;
+    background:rgba(255,255,255,.9)
+}
+.anime [href*="&tag="]{
+    white-space:normal!important;
+    text-transform:none;
+    pointer-events:none
+}
+.list-table{
+    display:table-row
+}
+.data.image~td,.data.status{
+    position:absolute
+}
+.list-table .list-table-data .data.image a{
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center!important
+}
+.list-item{
+    margin:8px;
+    position:relative;
+    float:left
+}
+.list-item .data{
+    opacity:1
+}
+.list-item .list-table-data{
+    position:absolute
+}
+.list-table .list-table-data .data{
+    padding:0;
+    border-bottom:none
+}
+.list-item .data.image{
+    z-index:0!important;
+    position:absolute
+}
+.list-item .data.image img{
+    height:100%;
+    width:100%
+}
+.list-item,.list-item .list-table-data{
+    width:180px!important;
+    height:283px!important
+}
+.list-item .data.title{
+    width:180px!important;
+    height:283px!important
+}
+.data.image{
+    overflow:hidden;
+    width:180px!important;
+    height:225px!important;
+    margin-top:0
+}
+.data.image a:before{
+    content:"";
+    display:inline-block!important;
+    position:relative;
+    width:180px;
+    height:225px;
+    background-color:rgba(0,0,0,.3);
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+    background-size:cover;
+    z-index:5;
+    box-shadow:0 0 5px #000 inset;
+    box-sizing:border-box;
+    transition:all .2s ease-in-out
+}
+.list-table .list-table-data:hover .data.image a:before{
+    transition:all .2s ease-in-out;
+    transform:scale(1.1)
+}
+.list-item .data.number{
+    padding-left:7px;
+    text-align:left!important;
+    line-height:25px!important;
+    width:173px;
+    height:25px;
+    text-shadow:0 0 2px #000,0 0 1px #000,1px 1px 7px #000,0 0 0 #000;
+    background:-webkit-linear-gradient(rgba(0,0,0,.7),transparent);
+    background:-o-linear-gradient(rgba(0,0,0,.7),transparent);
+    background:-moz-linear-gradient(rgba(0,0,0,.7),transparent);
+    background:linear-gradient(rgba(0,0,0,.7),transparent);
+    z-index:1!important;
+    position:absolute
+}
+.data.title>a{
+    position:absolute;
+    z-index:5;
+    top:230px;
+    height:35px!important;
+    line-height:1.05em;
+    text-align:center;
+    vertical-align:middle;
+    width:100%;
+    overflow:hidden
+}
+.list-item .data.title{
+    box-sizing:border-box;
+    height:200px!important;
+    padding:0!important
+}
+
+
+
+
+
+
+
+
+
+.list-table .list-table-header .header-title.studio{
+    display:none!important
+}
+.list-item .data.studio{
+    width:180px;
+    margin:0;
+    height:30px!important;
+    top:195px;
+    z-index:1!important;
+    display:table;
+    background-color:transparent;
+    background:rgba(0,0,0,0);
+    background:-moz-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.7) 100%);
+    background:-webkit-gradient(left top,left bottom,color-stop(0,rgba(0,0,0,0)),color-stop(100%,rgba(0,0,0,.7)));
+    background:-webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.7) 100%);
+    background:-o-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.7) 100%);
+    background:-ms-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.7) 100%);
+    background:linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.7) 100%)
+}
+.list-item .data.studio span{
+    display:table-cell;
+    vertical-align:middle
+}
+.list-item .data.score{
+    right:5px;
+    width:15px;
+    text-align:left;
+    bottom:-5px!important
+}
+.list-item .data.score a{
+    color:#fff
+}
+.list-item .data.score:hover *{
+    color:#fff
+}
+.list-item .data.studio *{
+    font-weight:700!important
+}
+.score select.edit-transition{
+    margin-left:-5px
+}
+.data.progress,.data.volume,a[href*="%C2%9"]{
+    bottom:-5px!important;
+    transition:opacity .15s ease-in-out;
+    padding-left:5px!important
+}
+.data.chapter{
+    bottom:-5px!important;
+    padding-left:70px!important
+}
+.data.chapter *,.data.progress *,.data.volume *{
+    color:#fff
+}
+.list-item .data.type{
+    right:5px!important;
+    width:50px!important;
+    top:5px!important;
+    text-align:right!important;
+    font-size:1em;
+    transition:opacity .15s ease-in-out;
+    font-weight:700;
+    opacity:1;
+    z-index:2;
+    text-shadow:0 0 2px #000,0 0 1px #000,1px 1px 7px #000,0 0 0 #000
+}
+.list-table .list-table-data .data.title .add-edit-more{
+    top:0;
+    left:75px;
+    font-size:0!important;
+    position:absolute;
+    z-index:10!important;
+    text-align:center!important;
+    vertical-align:middle!important;
+    width:25px!important;
+    height:25px!important;
+    display:block
+}
+.add-edit-more{
+    opacity:0;
+    transition:all 0s ease 0s
+}
+.list-item:hover .add-edit-more{
+    opacity:1
+}
+.list-table .list-table-data .data.title .edit a{
+    background-image:url(http://i.imgur.com/OT1yCLP.png);
+    display:block;
+    width:25px;
+    height:25px;
+    background-size:15px 15px;
+    background-repeat:no-repeat;
+    background-color:transparent;
+    background-position:50% 50%
+}
+.list-table .list-table-data .data.title .more a{
+    background-image:url(http://i.imgur.com/cUAaila.png);
+    display:inline-block;
+    width:15px;
+    height:15px;
+    background-size:cover;
+    color:transparent!important;
+    display:none
+}
+.list-table .list-table-data .data.title .add a{
+    background-image:url(http://i.imgur.com/AoTgUAL.png);
+    display:block;
+    width:25px;
+    height:25px;
+    background-size:15px 15px;
+    background-repeat:no-repeat;
+    background-color:transparent;
+    background-position:50% 50%
+}
+
+
+
+
+    /*2021 Changes*/
+    .data.tags span a{
+        pointer-events:auto;
+        cursor:pointer!important
+    }
+    .list-table .list-table-data .data.tags a:hover{
+        color:#000!important;
+        text-shadow:none
+    }
+    .cover-block::after{
+        opacity:0
+    }
+    a img{
+        background-size:cover!important;
+        height:250px!important;
+        width:178px!important
+    }
+    .data.image a:before{
+        content:"";
+        display:inline-block!important;
+        position:absolute;
+        width:180px;
+        height:225px;
+        background-color:rgba(0,0,0,.3);
+        background-position:center!important;
+        background-repeat:no-repeat!important;
+        background-size:cover;
+        z-index:5;
+        box-shadow:0 0 5px #000 inset;
+        box-sizing:border-box;
+        transition:all .2s ease-in-out
+    }
