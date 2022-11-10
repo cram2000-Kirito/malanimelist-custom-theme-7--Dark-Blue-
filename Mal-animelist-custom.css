@@ -1,13 +1,21 @@
 :root{
     /*color status*/
-    --color-current: #2db039;
+    --color-current: #2db038;
     --color-completed: #26448f;
     --color-onhold: #f1c83e;
     --color-dropped: #a12f31;
     --color-plantowatch: #c3c3c3;
+    /*color elements and typo*/
+    --color-scoreprogress: #0080ff;
+    --color-title: #fbfbfb;
+    --color-progress: #fff;
+    --color-type:  #fff;
+    --color-number: #fff;
+    --color-airing-rewatching: #ff0;
+    --color-icon-streaming: #4e83ff;
     --typo: Verdana, Arial;
 }
-
+/*background*/
 body.ownlist.anime{
     background-color: dimgrey;
     background-size: cover;
@@ -16,18 +24,16 @@ body.ownlist.anime{
 .list-container{
   opacity: 0.9;
 }
+
 /*menu*/
 .status-menu-container{
     z-index: 9;
 }
-
-
 /*table-header*/
 .list-table-header{
     display: none;
 }
-
-/*status barre*/
+/*status bar*/
 .list-table .list-table-data .data.status, .data.status{
   display: none;
 }
@@ -42,7 +48,7 @@ body.ownlist.anime{
 
 
 
-/*Cadre status*/
+/*status framework*/
 .list-table .list-table-data .data.status.reading, .list-table .list-table-data .data.status.watching ~ .data.image {
     border: var(--color-current) 2px solid;
 }
@@ -59,54 +65,70 @@ body.ownlist.anime{
     border: var(--color-plantowatch) 2px solid; 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.list-table .list-table-data:hover .data.title{
-    color:#fff;
+/*visiblity icon for edit*/
+.add-edit-more:before{
+  background-color: rgba(0, 0, 0, 0.08);
 }
-.header a:hover,.list-table .list-table-data a:not(.edit-disabled):hover{
-    text-decoration:underline
+
+/*Color defined*/
+.list-table .list-table-data .data a{
+    color: var(--color-scoreprogress)!important;
 }
+.link + select > *{
+    color: var(--color-scoreprogress)!important;
+}
+.data.chapter *, .data.progress *, .data.volume *{
+    color: var(--color-progress)!important;
+}
+.list-table .list-table-data:hover .data.title .content-status, .list-table .list-table-data:hover .data.title .rereading, .list-table .list-table-data:hover .data.title .rewatching{
+    color: var(--color-airing-rewatching);
+    text-shadow: 0 0 2px #000,0 0 1px #000,1px 1px 7px #000,0 0 0 #000;
+}
+/*icon streaming*/
+.icon-watch2 > a, .icon-watch-pv2 > a{
+    left: 5px !important;
+    top: 210px !important;
+}
+.icon-watch2 .malicon.malicon-movie-episode, .icon-watch2 .malicon.malicon-movie-pv, .icon-watch2 .malicon.malicon-streaming, .icon-watch-pv2 .malicon.malicon-movie-episode, .icon-watch-pv2 .malicon.malicon-movie-pv, .icon-watch-pv2 .malicon.malicon-streaming {
+    color: var(--color-icon-streaming)!important;
+    text-shadow: 0 0 2px #000,0 0 1px #000,1px 1px 7px #000,0 0 0 #000;
+}
+/*add # before number*/
+.data.number::before {
+    content: "#";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Shelter Style V2 - Layout originally designed by Takana no Hana*/
 .list-table .list-table-data .data{
     display:table-cell;
     padding:4px 0;
@@ -128,14 +150,12 @@ body.ownlist.anime{
     text-decoration:none!important;
     font-family: var(--typo);
     font-weight:100!important;
-    color:#fff!important;
+    color: var(--color-title) !important;
     max-height: 30px;
 }
-.list-table .list-table-data:hover .data.title .link{
-    color:#fff!important;
-}
 .list-table .list-table-data .data.title .content-status,.list-table .list-table-data .data.title .rereading,.list-table .list-table-data .data.title .rewatching{
-    color:#fff!important;
+    color: var(--color-airing-rewatching);
+    font-weight: 900;
     font-size:.9em;
     text-align:right!important;
     vertical-align:middle!important;
@@ -144,7 +164,8 @@ body.ownlist.anime{
     opacity:0
 }
 .list-table .list-table-data:hover .data.title .content-status,.list-table .list-table-data:hover .data.title .rereading,.list-table .list-table-data:hover .data.title .rewatching{
-    color:#fff!important;
+    color: var(--color-airing-rewatching);
+    font-weight: 900;
     font-size:1em;
     right:4px!important;
     top:30px!important;
@@ -454,12 +475,13 @@ div[class*=tags-]{
     width:173px;
     height:25px;
     text-shadow:0 0 2px #000,0 0 1px #000,1px 1px 7px #000,0 0 0 #000;
-    background:-webkit-linear-gradient(rgba(0,0,0,.7),transparent);
-    background:-o-linear-gradient(rgba(0,0,0,.7),transparent);
-    background:-moz-linear-gradient(rgba(0,0,0,.7),transparent);
-    background:linear-gradient(rgba(0,0,0,.7),transparent);
+    background:-webkit-linear-gradient(rgba(0,0,0,.1),transparent);
+    background:-o-linear-gradient(rgba(0,0,0,.1),transparent);
+    background:-moz-linear-gradient(rgba(0,0,0,.1),transparent);
+    background:linear-gradient(rgba(0,0,0,.1),transparent);
     z-index:1!important;
-    position:absolute
+    position:absolute;
+    color: var(--color-number)!important;
 }
 .data.title>a{
     position:absolute;
@@ -549,7 +571,8 @@ div[class*=tags-]{
     font-weight:700;
     opacity:1;
     z-index:2;
-    text-shadow:0 0 2px #000,0 0 1px #000,1px 1px 7px #000,0 0 0 #000
+    text-shadow:0 0 2px #000,0 0 1px #000,1px 1px 7px #000,0 0 0 #000;
+    color: var(--color-type)!important;
 }
 .list-table .list-table-data .data.title .add-edit-more{
     top:0;
@@ -626,7 +649,7 @@ div[class*=tags-]{
         position:absolute;
         width:180px;
         height:225px;
-        background-color:rgba(0,0,0,.3);
+        background-color:rgba(0,0,0,0);
         background-position:center!important;
         background-repeat:no-repeat!important;
         background-size:cover;
